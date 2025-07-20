@@ -642,6 +642,54 @@ a:focus {
   text-transform: uppercase;
 }
 
+
+.whatsapp-bubble-container {
+    position: fixed;
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+.whatsapp-bubble-container a {
+    display: flex; /* Menggunakan flexbox untuk mengatur ikon dan teks */
+    align-items: center; /* Pusatkan secara vertikal */
+    background-color: #25D366; /* Warna latar belakang WhatsApp */
+    color: white; /* Warna teks */
+    padding: 10px 20px; /* Padding di dalam balon */
+    border-radius: 30px; /* Membuat sudut sangat membulat */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    font-family: sans-serif; /* Font yang bersih */
+    font-size: 18px; /* Ukuran font */
+    font-weight: bold; /* Teks tebal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.3s ease-in-out; /* Animasi saat hover */
+}
+
+.whatsapp-bubble-container a:hover {
+    transform: scale(1.05); /* Sedikit membesar saat di-hover */
+}
+
+.whatsapp-bubble-container img {
+    width: 30px; /* Ukuran ikon */
+    height: 30px; /* Ukuran ikon */
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    filter: brightness(0) invert(1); /* Membuat ikon putih */
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .whatsapp-bubble-container a {
+        padding: 8px 15px; /* Padding lebih kecil di mobile */
+        font-size: 16px; /* Ukuran font lebih kecil di mobile */
+    }
+
+    .whatsapp-bubble-container img {
+        width: 25px; /* Ukuran ikon lebih kecil di mobile */
+        height: 25px; /* Ukuran ikon lebih kecil di mobile */
+        margin-right: 8px; /* Jarak lebih kecil di mobile */
+    }
+}
+
 /* contact section */
 .contact_section {
   background-image: url(../images/contact-bg.png);
